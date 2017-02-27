@@ -143,7 +143,7 @@ var storageArray2 = new A;
 function randomIntensityChanges() {
   var arrayObject = {}; // Empty object to store the light settings
   // Loop through each light and add a setting for it to the arrayObject
-  for (var i = 0; i < dmx.devices.length; i++) {
+  for (var i = 0, len = dmx.devices.length; i < len; i++) {
     arrayObject[i] = randomIntensity();
     // console.log('i is: ', i); // -> { '0': 113, '1': 164, '2': 237, '3': 135 }
   }
@@ -171,6 +171,15 @@ setInterval(function () {
 // Possible to have 80 channels.
 
 // Do a blackout function.
+// Need to have error handling for:
+// - No dmx connection, no usb-dmx connection
+// - No api response
+// - No
+// Gulpfile ES6->ES5, src and public folder
+// Npm v7 on pi
+// node on pi
+// sourcemaps
+
 
 
 
