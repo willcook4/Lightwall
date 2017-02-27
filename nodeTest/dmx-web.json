@@ -1,0 +1,62 @@
+module.exports = {
+	server: {
+		"listen_port": 8080,
+		"listen_host": "::"
+	},
+	presets: [
+		{
+			"label": "all",
+			"values": {
+				"test": { 0:255,  1:255,  2:255,  3:255,  4: 255 }
+			}
+		},
+		{
+			"label": "half",
+			"values": {
+				"test": { 0:128,  1:128,  2:128,  3:128,  4:128 }
+			}
+		},
+		{
+			"label": "off",
+			"values": {
+				"test": { 0:0,  1:0,  2:0,  3:0,  4: 0 }
+			}
+		},
+		{
+			"label": "dim",
+			"values": {
+				"test": { 0:40,  1:40,  2:40,  3:40,  4: 40 }
+			}
+		}
+	],
+	universes: {
+		"test": {
+			"output": {
+				 "driver": "enttec-usb-dmx-pro",
+				 "device": "tty.usbserial-EN099731"
+			},
+			"devices": [
+				{
+					"type": "LED",
+					"address": 0
+				},
+				{
+					"type": "LED1",
+					"address": 1
+				},
+				{
+					"type": "LED2",
+					"address": 2
+				},
+				{
+					"type": "LED3",
+					"address": 3
+				},
+				{
+					"type": "LED4",
+					"address": 4
+				}
+			]
+		}
+	}
+}
