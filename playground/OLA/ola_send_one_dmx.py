@@ -1,15 +1,14 @@
 import array
 from ola.ClientWrapper import ClientWrapper
 
+
 def DmxSent(state):
-  wrapper.Stop()
+    wrapper.Stop()
+
 
 universe = 1
-
-# Data Channel, Intensity
-data = array.array('B', [1, 2, 255])
+data = array.array('B', [10, 50, 255])
 wrapper = ClientWrapper()
 client = wrapper.Client()
 client.SendDmx(universe, data, DmxSent)
 wrapper.Run()
-

@@ -1,0 +1,471 @@
+olad -l 4
+Olad.cpp:84: OLA Daemon version 0.9.1
+OlaDaemon.cpp:114: Using configs in /home/pi/.ola
+PidStoreLoader.cpp:203: Loading BACKGROUND_QUEUED_STATUS_POLICY
+PidStoreLoader.cpp:203: Loading BACKGROUND_QUEUED_STATUS_POLICY_DESCRIPTION
+PidStoreLoader.cpp:203: Loading BACKGROUND_STATUS_TYPE
+PidStoreLoader.cpp:203: Loading QUEUED_STATUS_ENDPOINT_COLLECTION
+PidStoreLoader.cpp:203: Loading QUEUED_STATUS_UID_COLLECTION
+PidStoreLoader.cpp:203: Loading ENDPOINT_LIST
+PidStoreLoader.cpp:203: Loading ENDPOINT_TO_UNIVERSE
+PidStoreLoader.cpp:203: Loading RDM_TRAFFIC_ENABLE
+PidStoreLoader.cpp:203: Loading ENDPOINT_MODE
+PidStoreLoader.cpp:203: Loading ENDPOINT_LABEL
+PidStoreLoader.cpp:203: Loading DISCOVERY_STATE
+PidStoreLoader.cpp:203: Loading ENDPOINT_TIMING
+PidStoreLoader.cpp:203: Loading ENDPOINT_TIMING_DESCRIPTION
+PidStoreLoader.cpp:203: Loading BINDING_CONTROL_FIELDS
+PidStoreLoader.cpp:203: Loading ENDPOINT_IDENTIFY
+PidStoreLoader.cpp:203: Loading BACKGROUND_DISCOVERY
+PidStoreLoader.cpp:203: Loading ENDPOINT_DEVICE_LIST_CHANGE
+PidStoreLoader.cpp:203: Loading ENDPOINT_DEVICES
+PidStoreLoader.cpp:203: Loading TCP_COMMS_STATUS
+PidStoreLoader.cpp:203: Loading ENDPOINT_LIST_CHANGE
+PidStoreLoader.cpp:203: Loading LIST_INTERFACES
+PidStoreLoader.cpp:203: Loading INTERFACE_LABEL
+PidStoreLoader.cpp:203: Loading INTERFACE_HARDWARE_ADDRESS_TYPE1
+PidStoreLoader.cpp:203: Loading IPV4_DHCP_MODE
+PidStoreLoader.cpp:203: Loading IPV4_ZEROCONF_MODE
+PidStoreLoader.cpp:203: Loading IPV4_CURRENT_ADDRESS
+PidStoreLoader.cpp:203: Loading IPV4_STATIC_ADDRESS
+PidStoreLoader.cpp:203: Loading INTERFACE_RENEW_DHCP
+PidStoreLoader.cpp:203: Loading INTERFACE_RELEASE_DHCP
+PidStoreLoader.cpp:203: Loading INTERFACE_APPLY_CONFIGURATION
+PidStoreLoader.cpp:203: Loading IPV4_DEFAULT_ROUTE
+PidStoreLoader.cpp:203: Loading DNS_IPV4_NAME_SERVER
+PidStoreLoader.cpp:203: Loading DNS_HOSTNAME
+PidStoreLoader.cpp:203: Loading DNS_DOMAIN_NAME
+PidStoreLoader.cpp:203: Loading DISC_UNIQUE_BRANCH
+PidStoreLoader.cpp:203: Loading DISC_MUTE
+PidStoreLoader.cpp:203: Loading DISC_UN_MUTE
+PidStoreLoader.cpp:203: Loading PROXIED_DEVICES
+PidStoreLoader.cpp:203: Loading PROXIED_DEVICE_COUNT
+PidStoreLoader.cpp:203: Loading COMMS_STATUS
+PidStoreLoader.cpp:203: Loading QUEUED_MESSAGE
+PidStoreLoader.cpp:203: Loading STATUS_MESSAGES
+PidStoreLoader.cpp:203: Loading STATUS_ID_DESCRIPTION
+PidStoreLoader.cpp:203: Loading CLEAR_STATUS_ID
+PidStoreLoader.cpp:203: Loading SUB_DEVICE_STATUS_REPORT_THRESHOLD
+PidStoreLoader.cpp:203: Loading SUPPORTED_PARAMETERS
+PidStoreLoader.cpp:203: Loading PARAMETER_DESCRIPTION
+PidStoreLoader.cpp:203: Loading DEVICE_INFO
+PidStoreLoader.cpp:203: Loading PRODUCT_DETAIL_ID_LIST
+PidStoreLoader.cpp:203: Loading DEVICE_MODEL_DESCRIPTION
+PidStoreLoader.cpp:203: Loading MANUFACTURER_LABEL
+PidStoreLoader.cpp:203: Loading DEVICE_LABEL
+PidStoreLoader.cpp:203: Loading FACTORY_DEFAULTS
+PidStoreLoader.cpp:203: Loading LANGUAGE_CAPABILITIES
+PidStoreLoader.cpp:203: Loading LANGUAGE
+PidStoreLoader.cpp:203: Loading SOFTWARE_VERSION_LABEL
+PidStoreLoader.cpp:203: Loading BOOT_SOFTWARE_VERSION_ID
+PidStoreLoader.cpp:203: Loading BOOT_SOFTWARE_VERSION_LABEL
+PidStoreLoader.cpp:203: Loading DMX_PERSONALITY
+PidStoreLoader.cpp:203: Loading DMX_PERSONALITY_DESCRIPTION
+PidStoreLoader.cpp:203: Loading DMX_START_ADDRESS
+PidStoreLoader.cpp:203: Loading SLOT_INFO
+PidStoreLoader.cpp:203: Loading SLOT_DESCRIPTION
+PidStoreLoader.cpp:203: Loading DEFAULT_SLOT_VALUE
+PidStoreLoader.cpp:203: Loading DMX_BLOCK_ADDRESS
+PidStoreLoader.cpp:203: Loading DMX_FAIL_MODE
+PidStoreLoader.cpp:203: Loading DMX_STARTUP_MODE
+PidStoreLoader.cpp:203: Loading SENSOR_DEFINITION
+PidStoreLoader.cpp:203: Loading SENSOR_VALUE
+PidStoreLoader.cpp:203: Loading RECORD_SENSORS
+PidStoreLoader.cpp:203: Loading DIMMER_INFO
+PidStoreLoader.cpp:203: Loading MINIMUM_LEVEL
+PidStoreLoader.cpp:203: Loading MAXIMUM_LEVEL
+PidStoreLoader.cpp:203: Loading CURVE
+PidStoreLoader.cpp:203: Loading CURVE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading OUTPUT_RESPONSE_TIME
+PidStoreLoader.cpp:203: Loading OUTPUT_RESPONSE_TIME_DESCRIPTION
+PidStoreLoader.cpp:203: Loading MODULATION_FREQUENCY
+PidStoreLoader.cpp:203: Loading MODULATION_FREQUENCY_DESCRIPTION
+PidStoreLoader.cpp:203: Loading DEVICE_HOURS
+PidStoreLoader.cpp:203: Loading LAMP_HOURS
+PidStoreLoader.cpp:203: Loading LAMP_STRIKES
+PidStoreLoader.cpp:203: Loading LAMP_STATE
+PidStoreLoader.cpp:203: Loading LAMP_ON_MODE
+PidStoreLoader.cpp:203: Loading DEVICE_POWER_CYCLES
+PidStoreLoader.cpp:203: Loading BURN_IN
+PidStoreLoader.cpp:203: Loading DISPLAY_INVERT
+PidStoreLoader.cpp:203: Loading DISPLAY_LEVEL
+PidStoreLoader.cpp:203: Loading PAN_INVERT
+PidStoreLoader.cpp:203: Loading TILT_INVERT
+PidStoreLoader.cpp:203: Loading PAN_TILT_SWAP
+PidStoreLoader.cpp:203: Loading REAL_TIME_CLOCK
+PidStoreLoader.cpp:203: Loading LOCK_PIN
+PidStoreLoader.cpp:203: Loading LOCK_STATE
+PidStoreLoader.cpp:203: Loading LOCK_STATE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading IDENTIFY_DEVICE
+PidStoreLoader.cpp:203: Loading RESET_DEVICE
+PidStoreLoader.cpp:203: Loading POWER_STATE
+PidStoreLoader.cpp:203: Loading PERFORM_SELFTEST
+PidStoreLoader.cpp:203: Loading SELF_TEST_DESCRIPTION
+PidStoreLoader.cpp:203: Loading CAPTURE_PRESET
+PidStoreLoader.cpp:203: Loading PRESET_PLAYBACK
+PidStoreLoader.cpp:203: Loading IDENTIFY_MODE
+PidStoreLoader.cpp:203: Loading PRESET_INFO
+PidStoreLoader.cpp:203: Loading PRESET_STATUS
+PidStoreLoader.cpp:203: Loading PRESET_MERGEMODE
+PidStoreLoader.cpp:203: Loading POWER_ON_SELF_TEST
+PidStoreLoader.cpp:203: Loading DEVICE_MODE
+PidStoreLoader.cpp:203: Loading FAN_MODE
+PidStoreLoader.cpp:203: Loading STATUS_LEDS
+PidStoreLoader.cpp:203: Loading CCT_ADJUST
+PidStoreLoader.cpp:203: Loading GN_ADJUST
+PidStoreLoader.cpp:203: Loading DMX_SIGNAL_LOSS_MODE
+PidStoreLoader.cpp:203: Loading SHOW_ID
+PidStoreLoader.cpp:203: Loading OUTPUT_POWER
+PidStoreLoader.cpp:203: Loading HOP_PATTERN
+PidStoreLoader.cpp:203: Loading BANDWIDTH
+PidStoreLoader.cpp:203: Loading NUM_OF_CHANNELS
+PidStoreLoader.cpp:203: Loading LEVEL_TEST
+PidStoreLoader.cpp:203: Loading CURVE
+PidStoreLoader.cpp:203: Loading BUMP_ENABLED
+PidStoreLoader.cpp:203: Loading DATA_LOSS_TIMEOUT
+PidStoreLoader.cpp:203: Loading BACKLIGHT_TIMEOUT
+PidStoreLoader.cpp:203: Loading RDM_PROXY_ENABLED
+PidStoreLoader.cpp:203: Loading INPUT_FORMAT
+PidStoreLoader.cpp:203: Loading IP_ADDRESS
+PidStoreLoader.cpp:203: Loading IP_SUBNET_MASK
+PidStoreLoader.cpp:203: Loading IP_GATEWAY
+PidStoreLoader.cpp:203: Loading DHCP_MODE
+PidStoreLoader.cpp:203: Loading MAC_ADDRESS
+PidStoreLoader.cpp:203: Loading SET_UID
+PidStoreLoader.cpp:203: Loading DMX_OUTPUT_STANDARD
+PidStoreLoader.cpp:203: Loading ADD_DISCOVERY
+PidStoreLoader.cpp:203: Loading DMX_INTERSLOT_TIME
+PidStoreLoader.cpp:203: Loading LATENCY
+PidStoreLoader.cpp:203: Loading FACTORY_SETTINGS_LOCK
+PidStoreLoader.cpp:203: Loading DMX_RDM_INTERLEAVE
+PidStoreLoader.cpp:203: Loading PROXIED_DEVICES_ENHANCED
+PidStoreLoader.cpp:203: Loading ADAPTIVE_ON_OFF
+PidStoreLoader.cpp:203: Loading PWRUP_TEST
+PidStoreLoader.cpp:203: Loading INTERNAL_STATS
+PidStoreLoader.cpp:203: Loading NE_FAULT_DETECT_MODE
+PidStoreLoader.cpp:203: Loading DMX_PROTECT_MODE
+PidStoreLoader.cpp:203: Loading DMX_LOSS_MODE
+PidStoreLoader.cpp:203: Loading PREHEAT_LEVEL
+PidStoreLoader.cpp:203: Loading OUTPUT_CAP_VALUE
+PidStoreLoader.cpp:203: Loading DMX_TERM_MODE
+PidStoreLoader.cpp:203: Loading FULL_DISCOVERY
+PidStoreLoader.cpp:203: Loading OUTPUT_DEFAULT_VALUE
+PidStoreLoader.cpp:203: Loading DALI_FADE_TIME
+PidStoreLoader.cpp:203: Loading INCREMENTAL_DISCOVERY_INTERVAL
+PidStoreLoader.cpp:203: Loading ACK_TIMER_FACTOR
+PidStoreLoader.cpp:203: Loading MDG_NETWORK_UNIVERSE_NUMBER
+PidStoreLoader.cpp:203: Loading MDG_NETWORK_UNIVERSE_NAME
+PidStoreLoader.cpp:203: Loading MDG_GENERATOR_STATE
+PidStoreLoader.cpp:203: Loading DMX_LAMP_OFF_ENABLE
+PidStoreLoader.cpp:203: Loading DMX_RESET_ENABLE
+PidStoreLoader.cpp:203: Loading MCX_LAMP_OFF_ENABLE
+PidStoreLoader.cpp:203: Loading STAND_ALONE_OPERATION_ENABLE
+PidStoreLoader.cpp:203: Loading SYNCHRONIZED
+PidStoreLoader.cpp:203: Loading AUTO_PROGRAM_ENABLE
+PidStoreLoader.cpp:203: Loading ENABLE_TIMERS
+PidStoreLoader.cpp:203: Loading TIMER1_START_TIME
+PidStoreLoader.cpp:203: Loading TIMER1_END_TIME
+PidStoreLoader.cpp:203: Loading TIMER2_START_TIME
+PidStoreLoader.cpp:203: Loading TIMER2_END_TIME
+PidStoreLoader.cpp:203: Loading LIGHTSENSOR_LEVEL_TRIGGER_ENABLE
+PidStoreLoader.cpp:203: Loading CAPTURE_CURRENT_SENSOR_VALUE
+PidStoreLoader.cpp:203: Loading LIGHTSENSOR_TRIGGER_LEVEL
+PidStoreLoader.cpp:203: Loading ADD_SCENE
+PidStoreLoader.cpp:203: Loading INSERT_SCENE
+PidStoreLoader.cpp:203: Loading STORE_SCENE
+PidStoreLoader.cpp:203: Loading DELETE_SCENE
+PidStoreLoader.cpp:203: Loading DELETE_ALL_SCENES
+PidStoreLoader.cpp:203: Loading NEXT_SCENE
+PidStoreLoader.cpp:203: Loading PREVIOUS_SCENE
+PidStoreLoader.cpp:203: Loading SCENE_SETTINGS
+PidStoreLoader.cpp:203: Loading RUN_PROGRAM
+PidStoreLoader.cpp:203: Loading SCENE_NUMBER
+PidStoreLoader.cpp:203: Loading SCENE_WAIT_TIME
+PidStoreLoader.cpp:203: Loading SCENE_FADE_TIME
+PidStoreLoader.cpp:203: Loading SCENE_INTENSITY
+PidStoreLoader.cpp:203: Loading SCENE_CYAN
+PidStoreLoader.cpp:203: Loading SCENE_MAGENTA
+PidStoreLoader.cpp:203: Loading SCENE_YELLOW
+PidStoreLoader.cpp:203: Loading SCENE_RED
+PidStoreLoader.cpp:203: Loading SCENE_GREEN
+PidStoreLoader.cpp:203: Loading SCENE_BLUE
+PidStoreLoader.cpp:203: Loading SCENE_AMBER
+PidStoreLoader.cpp:203: Loading SCENE_WHITE
+PidStoreLoader.cpp:203: Loading SCENE_ZOOM
+PidStoreLoader.cpp:203: Loading SCENE_FOCUS
+PidStoreLoader.cpp:203: Loading SCENE_RANDOM_COLOR
+PidStoreLoader.cpp:203: Loading SCENE_COLOR_WHEEL
+PidStoreLoader.cpp:203: Loading SCENE_GOBO_SELECTION
+PidStoreLoader.cpp:203: Loading SCENE_GOBO_INDEXING
+PidStoreLoader.cpp:203: Loading SCENE_ANIMATION_POSITION
+PidStoreLoader.cpp:203: Loading SCENE_ANIMATION_INDEXING
+PidStoreLoader.cpp:203: Loading SCENE_GET_DMX
+PidStoreLoader.cpp:203: Loading SCENE_FROST_ENABLE
+PidStoreLoader.cpp:203: Loading AUTO_SHUTTER_BO_ENABLE
+PidStoreLoader.cpp:203: Loading EFFECT_SPEED
+PidStoreLoader.cpp:203: Loading EFFECT_SHORTCUTS_ENABLE
+PidStoreLoader.cpp:203: Loading EFFECT_FEEDBACK_ENABLE
+PidStoreLoader.cpp:203: Loading LAMP_HOUR_WARNING_ENABLE
+PidStoreLoader.cpp:203: Loading LAMP_HOUR_WARNING_HOURS
+PidStoreLoader.cpp:203: Loading AIR_FILTER_HOUR
+PidStoreLoader.cpp:203: Loading AIR_FILTER_HOUR_WARNING_HOURS
+PidStoreLoader.cpp:203: Loading DISPLAY_ERRORS_ENABLE
+PidStoreLoader.cpp:203: Loading LAMP_ERROR_TEST_ENABLE
+PidStoreLoader.cpp:203: Loading SAVE_CUSTOM_CONFIGURATION
+PidStoreLoader.cpp:203: Loading LOAD_CUSTOM_CONFIGURATION
+PidStoreLoader.cpp:203: Loading BARNDOOR_SOFTWARE_VERSION
+PidStoreLoader.cpp:203: Loading CMY_BLACKOUT_ENABLE
+PidStoreLoader.cpp:203: Loading TRACKING_MODE
+PidStoreLoader.cpp:203: Loading TRACKING_CAL
+PidStoreLoader.cpp:203: Loading DIMMER_CURVE
+PidStoreLoader.cpp:203: Loading FOCUS_TRACKING
+PidStoreLoader.cpp:203: Loading DISPLAY_AUTO_OFF
+PidStoreLoader.cpp:203: Loading LAMP_PREHEAT_ENABLE
+PidStoreLoader.cpp:203: Loading LAMP_PREHEAT_VALUE
+PidStoreLoader.cpp:203: Loading LAMP_POWER_ENABLE
+PidStoreLoader.cpp:203: Loading LAMP_POWER_VALUE
+PidStoreLoader.cpp:203: Loading IRIS_BLACKOUT_ENABLE
+PidStoreLoader.cpp:203: Loading COLOR_WHEEL_BLACKOUT_ENABLE
+PidStoreLoader.cpp:203: Loading STUDIO_MODE
+PidStoreLoader.cpp:203: Loading BLOCK_TEMP_SETTING
+PidStoreLoader.cpp:203: Loading PAN_TILT_SPEED
+PidStoreLoader.cpp:203: Loading PAN_TILT_MOVE_ON_RESET_ENABLE
+PidStoreLoader.cpp:203: Loading PAN_TILT_LIMITATION_ENABLE
+PidStoreLoader.cpp:203: Loading PAN_LIMITATION_MINIMUM
+PidStoreLoader.cpp:203: Loading PAN_LIMITATION_MAXIMUM
+PidStoreLoader.cpp:203: Loading TILT_LIMITATION_MINIMUM
+PidStoreLoader.cpp:203: Loading TILT_LIMITATION_MAXIMUM
+PidStoreLoader.cpp:203: Loading PAN_TILT_LIMITATION_AREA
+PidStoreLoader.cpp:203: Loading FOLLOW_SPOT_MODE_ENABLE
+PidStoreLoader.cpp:203: Loading FOLLOW_SPOT_MODE_LOCK_TOGGLE
+PidStoreLoader.cpp:203: Loading FOLLOW_SPOT_MODE_LOCK_PAN
+PidStoreLoader.cpp:203: Loading FOLLOW_SPOT_MODE_LOCK_TILT
+PidStoreLoader.cpp:203: Loading REGULATE_LAMP_FAN
+PidStoreLoader.cpp:203: Loading REGULATE_GOBO_FAN
+PidStoreLoader.cpp:203: Loading LAMP_COOLING
+PidStoreLoader.cpp:203: Loading FAN_CLEAN
+PidStoreLoader.cpp:203: Loading FAN_MODE
+PidStoreLoader.cpp:203: Loading SERIAL_NUMBER
+PidStoreLoader.cpp:203: Loading EVENT_LOG_USER_EVENT_TRIGGER
+PidStoreLoader.cpp:203: Loading DMX_HOLD_MODE
+PidStoreLoader.cpp:203: Loading SLOT_LABELS
+PidStoreLoader.cpp:203: Loading MODIFY_SENSOR_DEFINITION
+PidStoreLoader.cpp:203: Loading NETWORK_ADDRESS
+PidStoreLoader.cpp:203: Loading NETWORK_MASK
+PidStoreLoader.cpp:203: Loading GATEWAY_ADDRESS
+PidStoreLoader.cpp:203: Loading DNS_ADDRESS
+PidStoreLoader.cpp:203: Loading DC_OFFSET
+PidStoreLoader.cpp:203: Loading DC_FADER_OFFSET
+PidStoreLoader.cpp:203: Loading DC_CALIBRATION
+PidStoreLoader.cpp:203: Loading CURVE_DEFINITION
+PidStoreLoader.cpp:203: Loading ETC_LED_CURVE
+PidStoreLoader.cpp:203: Loading ETC_LED_CURVE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_STROBE
+PidStoreLoader.cpp:203: Loading ETC_LED_OUTPUT_MODE
+PidStoreLoader.cpp:203: Loading ETC_LED_OUTPUT_MODE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_RED_SHIFT
+PidStoreLoader.cpp:203: Loading ETC_LED_WHITE_POINT
+PidStoreLoader.cpp:203: Loading ETC_LED_WHITE_POINT_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_FREQUENCY
+PidStoreLoader.cpp:203: Loading ETC_DMX_LOSS_BEHAVIOR
+PidStoreLoader.cpp:203: Loading ETC_DMX_LOSS_BEHAVIOR_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_PLUS_SEVEN
+PidStoreLoader.cpp:203: Loading ETC_BACKLIGHT_BRIGHTNESS
+PidStoreLoader.cpp:203: Loading ETC_BACKLIGHT_TIMEOUT
+PidStoreLoader.cpp:203: Loading ETC_STATUS_INDICATORS
+PidStoreLoader.cpp:203: Loading ETC_RECALIBRATE_FIXTURE
+PidStoreLoader.cpp:203: Loading ETC_OVER_TEMP_MODE
+PidStoreLoader.cpp:203: Loading ETC_SIMPLE_SETUP_MODE
+PidStoreLoader.cpp:203: Loading ETC_LED_STROBE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_RED_SHIFT_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_LED_PLUS_SEVEN_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_BACKLIGHT_TIMEOUT_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_SIMPLE_SETUP_MODE_DESCRIPTION
+PidStoreLoader.cpp:203: Loading ETC_PREPARE_FOR_SOFTWARE_DOWNLOAD
+PidStoreLoader.cpp:203: Loading SERIAL_NUMBER
+PidStoreLoader.cpp:203: Loading CODE_VERSION
+PidStoreLoader.cpp:179: Load Complete
+OlaServer.cpp:494: Updated PID definitions.
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+OlaServer.cpp:212: Server UID is 7a70:0901a8c0
+HTTPServer.cpp:463: HTTP Server started on port 9090
+HTTPServer.cpp:566: Adding 17 as a new socket
+SelectPoller.cpp:160: ss process time was 0.000013
+SelectPoller.cpp:160: ss process time was 0.000016
+PluginManager.cpp:77: Skipping FTDI USB DMX because it was disabled
+PluginManager.cpp:77: Skipping UART native DMX because it was disabled
+PluginManager.cpp:108: Trying to start ArtNet
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:6454
+DeviceManager.cpp:116: Installed device: ArtNet [192.168.1.9]:2-1
+PluginManager.cpp:112: Started ArtNet
+PluginManager.cpp:108: Trying to start Dummy
+DeviceManager.cpp:116: Installed device: Dummy Device:1-1
+PluginManager.cpp:112: Started Dummy
+PluginManager.cpp:108: Trying to start E1.31 (sACN)
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:5568
+DeviceManager.cpp:116: Installed device: E1.31 (DMX over ACN) [192.168.1.9]:11-1
+PluginManager.cpp:112: Started E1.31 (sACN)
+PluginManager.cpp:108: Trying to start ESP Net
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:3333
+DeviceManager.cpp:116: Installed device: ESP Net [192.168.1.9]:4-1
+PluginManager.cpp:112: Started ESP Net
+PluginManager.cpp:108: Trying to start KarateLight
+IOUtils.cpp:38: Failed to open /dev/kldmx0: No such file or directory
+KaratePlugin.cpp:79: Could not open /dev/kldmx0 No such file or directory
+PluginManager.cpp:112: Started KarateLight
+PluginManager.cpp:108: Trying to start KiNET
+Socket.cpp:143: Binding to 0.0.0.0:6038
+DeviceManager.cpp:116: Installed device: KiNet Device:16-1
+PluginManager.cpp:112: Started KiNET
+PluginManager.cpp:108: Trying to start Milford Instruments
+MilInstPlugin.cpp:57: No path configured for device, please set one in ola-milinst.conf
+PluginManager.cpp:112: Started Milford Instruments
+PluginManager.cpp:108: Trying to start Enttec Open DMX
+IOUtils.cpp:38: Failed to open /dev/dmx0: No such file or directory
+OpenDmxPlugin.cpp:80: Could not open /dev/dmx0 No such file or directory
+PluginManager.cpp:112: Started Enttec Open DMX
+PluginManager.cpp:108: Trying to start OSC
+OSCDevice.cpp:88: No targets specified for OSC Output port 0
+OSCDevice.cpp:88: No targets specified for OSC Output port 1
+OSCDevice.cpp:88: No targets specified for OSC Output port 2
+OSCDevice.cpp:88: No targets specified for OSC Output port 3
+OSCDevice.cpp:88: No targets specified for OSC Output port 4
+DeviceManager.cpp:116: Installed device: OSC Device:14-1
+PluginManager.cpp:112: Started OSC
+PluginManager.cpp:108: Trying to start Renard
+RenardPlugin.cpp:57: No path configured for device, please set one in ola-renard.conf
+PluginManager.cpp:112: Started Renard
+PluginManager.cpp:108: Trying to start SandNet
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:37895
+Socket.cpp:143: Binding to 0.0.0.0:37900
+DeviceManager.cpp:116: Installed device: SandNet [192.168.1.9]:7-1
+PluginManager.cpp:112: Started SandNet
+PluginManager.cpp:108: Trying to start ShowNet
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:2501
+DeviceManager.cpp:116: Installed device: ShowNet [192.168.1.9]:3-1
+PluginManager.cpp:112: Started ShowNet
+PluginManager.cpp:108: Trying to start SPI
+PluginManager.cpp:112: Started SPI
+PluginManager.cpp:108: Trying to start StageProfi
+SelectPoller.cpp:160: ss process time was 0.000009
+StageProfiDevice.cpp:84: StageProfiPlugin: no device found at /dev/ttyUSB0
+PluginManager.cpp:112: Started StageProfi
+PluginManager.cpp:108: Trying to start Serial USB
+WidgetDetectorThread.cpp:204: Found potential USB Serial device at /dev/ttyUSB0
+WidgetDetectorThread.cpp:210: new descriptor @ 0x1db2040 for /dev/ttyUSB0
+WidgetDetectorThread.cpp:373: trying stage 0 for 0x1db2040
+PluginManager.cpp:112: Started Serial USB
+PluginManager.cpp:108: Trying to start USB
+SelectPoller.cpp:160: ss process time was 0.000016
+UsbDmxPlugin.cpp:99: libusb debug level set to 0
+PluginManager.cpp:112: Started USB
+PluginManager.cpp:108: Trying to start Pathport
+PosixInterfacePicker.cpp:157: skipping lo because it's a loopback
+PosixInterfacePicker.cpp:236: Found: wlan0, 192.168.1.9, d4:7b:b0:0e:7f:4f
+InterfacePicker.cpp:92: Using interface wlan0 (192.168.1.9)
+Socket.cpp:143: Binding to 0.0.0.0:3792
+DeviceManager.cpp:116: Installed device: Pathport [192.168.1.9]:9-1
+PluginManager.cpp:112: Started Pathport
+SelectPoller.cpp:160: ss process time was 0.000017
+SelectPoller.cpp:160: ss process time was 0.000012
+SelectPoller.cpp:160: ss process time was 0.000010
+UsbProWidgetDetector.cpp:312: Usb Widget didn't respond to messages, esta id 0, device id 0
+WidgetDetectorThread.cpp:373: trying stage 1 for 0x1db2040
+SelectPoller.cpp:160: ss process time was 0.000015
+SelectPoller.cpp:160: ss process time was 0.000013
+WidgetDetectorThread.cpp:370: no more detectors to try for  0x1db2040
+SelectPoller.cpp:160: ss process time was 0.000016
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000018
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000012
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000012
+PathportDevice.cpp:144: Sending pathport arp reply
+SelectPoller.cpp:160: ss process time was 0.000016
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000015
+HTTPServer.cpp:566: Adding 26 as a new socket
+SelectPoller.cpp:160: ss process time was 0.002155
+SelectPoller.cpp:160: ss process time was 0.000014
+SelectPoller.cpp:160: ss process time was 0.020629
+SelectPoller.cpp:160: ss process time was 0.000260
+SelectPoller.cpp:160: ss process time was 0.001283
+OlaServer.cpp:343: Garbage collecting
+SelectPoller.cpp:160: ss process time was 0.000012
+SelectPoller.cpp:160: ss process time was 0.000011
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000015
+SelectPoller.cpp:160: ss process time was 0.000021
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000012
+PathportDevice.cpp:144: Sending pathport arp reply
+SelectPoller.cpp:160: ss process time was 0.000013
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000012
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000011
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000013
+PathportDevice.cpp:144: Sending pathport arp reply
+SelectPoller.cpp:160: ss process time was 0.000011
+OlaServer.cpp:343: Garbage collecting
+SelectPoller.cpp:160: ss process time was 0.000013
+SelectPoller.cpp:160: ss process time was 0.000009
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000015
+WidgetDetectorThread.cpp:204: Found potential USB Serial device at /dev/ttyUSB0
+WidgetDetectorThread.cpp:210: new descriptor @ 0x1d95068 for /dev/ttyUSB0
+WidgetDetectorThread.cpp:373: trying stage 0 for 0x1d95068
+SelectPoller.cpp:160: ss process time was 0.000013
+SelectPoller.cpp:160: ss process time was 0.000012
+SelectPoller.cpp:160: ss process time was 0.000010
+SelectPoller.cpp:160: ss process time was 0.000016
+SelectPoller.cpp:160: ss process time was 0.000016
+SelectPoller.cpp:160: ss process time was 0.000046
+UsbProWidgetDetector.cpp:515: Detected USB Device: ESTA Id: 0x0, device Id: 0, serial: 0x2160505, f/w version: 1.44
+SelectPoller.cpp:160: ss process time was 0.000010
+WidgetDetectorThread.cpp:304: Defaulting to a Usb Pro device
+WidgetDetectorThread.cpp:315: USB Pro Firmware >= 2.4 is required for RDM support, this widget is running 1.44
+DeviceManager.cpp:116: Installed device: Enttec Usb Pro Device:5-02160505
+SelectPoller.cpp:160: ss process time was 0.000017
+SelectPoller.cpp:160: ss process time was 0.000161
+SelectPoller.cpp:160: ss process time was 0.000015
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000015
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000013
+PathportDevice.cpp:144: Sending pathport arp reply
+SelectPoller.cpp:160: ss process time was 0.000012
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000014
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000014
+OlaServer.cpp:343: Garbage collecting
+SelectPoller.cpp:160: ss process time was 0.000012
+SelectPoller.cpp:160: ss process time was 0.000101
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000014
+PathportDevice.cpp:144: Sending pathport arp reply
+SelectPoller.cpp:160: ss process time was 0.000015
+SelectPoller.cpp:160: ss process time was 0.000017
+SandNetDevice.cpp:151: Sending Sandnet advertisement
+SelectPoller.cpp:160: ss process time was 0.000013
+

@@ -1,0 +1,89 @@
+pi@loop:~ $ ola_dev_info
+TCPSocket.cpp:155: connect to 127.0.0.1:9010 failed, Connection refused
+Failed to initialize event logging
+Device 1: ArtNet [192.168.1.9]
+  port 0, IN, priority 100, RDM supported
+  port 1, IN, priority 100, RDM supported
+  port 2, IN, priority 100, RDM supported
+  port 3, IN, priority 100, RDM supported
+  port 0, OUT, RDM supported
+  port 1, OUT, RDM supported
+  port 2, OUT, RDM supported
+  port 3, OUT, RDM supported
+Device 2: Dummy Device
+  port 0, OUT Dummy Port, RDM supported
+Device 3: E1.31 (DMX over ACN) [192.168.1.9]
+  port 0, IN, priority inherited
+  port 1, IN, priority inherited
+  port 2, IN, priority inherited
+  port 3, IN, priority inherited
+  port 4, IN, priority inherited
+  port 0, OUT, priority inherited
+  port 1, OUT, priority inherited
+  port 2, OUT, priority inherited
+  port 3, OUT, priority inherited
+  port 4, OUT, priority inherited
+Device 4: ESP Net [192.168.1.9]
+  port 0, IN, priority 100
+  port 1, IN, priority 100
+  port 2, IN, priority 100
+  port 3, IN, priority 100
+  port 4, IN, priority 100
+  port 0, OUT
+  port 1, OUT
+  port 2, OUT
+  port 3, OUT
+  port 4, OUT
+Device 5: KiNet Device
+Device 6: OSC Device
+  port 0, IN /dmx/universe/%d, priority 100
+  port 1, IN /dmx/universe/%d, priority 100
+  port 2, IN /dmx/universe/%d, priority 100
+  port 3, IN /dmx/universe/%d, priority 100
+  port 4, IN /dmx/universe/%d, priority 100
+Device 7: SandNet [192.168.1.9]
+  port 0, IN, priority 100
+  port 1, IN, priority 100
+  port 2, IN, priority 100
+  port 3, IN, priority 100
+  port 4, IN, priority 100
+  port 5, IN, priority 100
+  port 6, IN, priority 100
+  port 7, IN, priority 100
+  port 0, OUT
+  port 1, OUT
+Device 8: ShowNet [192.168.1.9]
+  port 0, IN ShowNet 1-512, priority 100
+  port 1, IN ShowNet 513-1024, priority 100
+  port 2, IN ShowNet 1025-1536, priority 100
+  port 3, IN ShowNet 1537-2048, priority 100
+  port 4, IN ShowNet 2049-2560, priority 100
+  port 5, IN ShowNet 2561-3072, priority 100
+  port 6, IN ShowNet 3073-3584, priority 100
+  port 7, IN ShowNet 3585-4096, priority 100
+  port 0, OUT ShowNet 1-512
+  port 1, OUT ShowNet 513-1024
+  port 2, OUT ShowNet 1025-1536
+  port 3, OUT ShowNet 1537-2048
+  port 4, OUT ShowNet 2049-2560
+  port 5, OUT ShowNet 2561-3072
+  port 6, OUT ShowNet 3073-3584
+  port 7, OUT ShowNet 3585-4096
+Device 9: Pathport [192.168.1.9]
+  port 0, IN, priority 100
+  port 1, IN, priority 100
+  port 2, IN, priority 100
+  port 3, IN, priority 100
+  port 4, IN, priority 100
+  port 5, IN, priority 100
+  port 6, IN, priority 100
+  port 7, IN, priority 100
+  port 0, OUT
+  port 1, OUT
+  port 2, OUT
+  port 3, OUT
+  port 4, OUT
+  port 5, OUT
+  port 6, OUT
+  port 7, OUT
+pi@loop:~ $
