@@ -7,7 +7,9 @@ var A = DMX.Animation;
 var dmx = new DMX();
 
 // Universe Setup
-var universe = dmx.addUniverse('universe', 'enttec-usb-dmx-pro', '/dev/tty.usbserial-EN099731');
+var universe = dmx.addUniverse('universe', 'enttec-usb-dmx-pro', '/dev/tty.usbserial-EN099731'); // Mac
+//var universe = dmx.addUniverse('universe', 'enttec-usb-dmx-pro', '/dev/ttyUSB0'); // Debian
+
 
 // Lights in the universe
 dmx.devices = [{
@@ -24,9 +26,12 @@ dmx.devices = [{
   'address': 4
 }];
 
+var loopCount = 0;
+
 // Callback, called when sequence finishes
 var done = function done() {
-  console.log('Sequence Complete');
+  console.log('Sequence Complete: ', loopCount);
+  loopCount++;
 };
 
 // Animation sequence
@@ -60,7 +65,7 @@ var randomIntensity = function randomIntensity() {
   return intensity;
 };
 
-// let loopCount = 0;
+
 
 // while(true) {
 // setInterval(function () {
@@ -79,7 +84,10 @@ var sequenceDuration = 10000; // Milliseconds
 function fade_up_then_down() {
   var max = 255;
   var min = 0;
-  storageArray.add({ 0: max, 1: max, 2: max }, sequenceDuration / 3).delay(sequenceDuration / 3).add({ 0: min, 1: min, 2: min }, sequenceDuration / 3)
+  storageArray
+    .add({ 0: max, 1: max, 2: max }, sequenceDuration / 3)
+    .delay(sequenceDuration / 3)
+    .add({ 0: min, 1: min, 2: min }, sequenceDuration / 3)
   //Run the sequence
   .run(universe);
 }
