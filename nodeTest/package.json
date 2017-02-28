@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dmx": "0.0.4"
+    "axios": "^0.15.3",
+    "dmx": "0.0.4",
+    "metar": "^0.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
