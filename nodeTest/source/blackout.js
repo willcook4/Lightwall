@@ -13,13 +13,24 @@ var universe = dmx.addUniverse('universe', 'enttec-usb-dmx-pro', '/dev/tty.usbse
 dmx.devices = devices;
 
 //The blackout function
-var blackout = function() {
-  for (var i=0, len=dmx.devices.length; i < len; i++) {
+var blackout = new Promise((resolve, reject) => {
+  for (var i=0, len=512; i < len; i++) {
     universe.update({i: 0});
+    if(i === 255 ){
+      resolve('All Done');
+    }
   }
+});
+
+blackout.then((successMessage) => {
   console.log('Turning all channels to 0 intensity');
-};
+  process.on('exit', () => {
+    console.log(`${successMessage}, About to exit, All channels set to 0 Intensity`);
+    process.exit();
+  });
+}).catch((err) => {
+  console.log('Error: ', err);
+});
 
-blackout();
 
-module.exports = blackout;
+// module.exports = blackout;

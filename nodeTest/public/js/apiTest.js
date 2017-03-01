@@ -62,9 +62,14 @@ function makeMultipleRequests(inputArray) {
     results.push(c);
     results.push(d);
     return results;
-  })).catch(function (err) {
-    console.log('Error: ', err);
-    return 'Api request error';
+  })).catch(function (error) {
+    if (error.response) {
+      console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      console.log('Error Code: ', error.response.status);
+      console.log('Error Message: ', error.response.data);
+      return 'Api request error see terminal for errors';
+    }
+    return 'Api request error: ';
   });
   // const j = getInfo(inputArray[i]);
 

@@ -3,6 +3,7 @@
 var DMX = require('dmx');
 //Custom modules/packages
 var devices = require('./devices').devices;
+var api = require('./apiTest');
 
 // DMX setup
 var A = DMX.Animation;
@@ -21,7 +22,7 @@ dmx.devices = devices;
 let loopCount = 0;
 
 // Callback, called when sequence finishes
-const done = function done() {
+const done = () => {
   if(loopCount%10 === 0) {
     console.log('Sequences Complete: ', loopCount);
   }
@@ -66,6 +67,7 @@ const storageArray = new A();
 const sequenceDuration = 5000; // Milliseconds
 
 /////// 1st Test ////////////////
+/*
 
 function fade_up_then_down() {
   var max = 255;
@@ -78,7 +80,10 @@ function fade_up_then_down() {
   .run(universe);
 }
 
+*/
+
 ///////// 2nd Test //////
+/*
 // Create an empty storageArray
 var storageArray2 = new A;
 
@@ -95,30 +100,38 @@ function randomIntensityChanges() {
     .delay(5000 - randomDuration)
     .run(universe);
 }
+*/
 
 /////// Running the function ////////////
+/*
 // How often to loop through last number is the length of a sequence
 setInterval(function () {
-  // fade_up_then_down();
-  // storageArray.run(universe, done);
-  randomIntensityChanges();
-  storageArray2.run(universe, done);
+  // fade_up_then_down(); // First Test
+  // storageArray.run(universe, done); // First Test
+  randomIntensityChanges(); // Second Test
+  storageArray2.run(universe, done); // First Test
 }, sequenceDuration);
+*/
 
-
-///////////// Notes:
+///////////// Notes: /////////////////
 // Will run on raspberry pi 3.
 // Possible to have 80 channels.
+// Visualiser, open sound control/DMX
+
 
 // Do a blackout function.
 // Need to have error handling for:
 // - No dmx connection, no usb-dmx connection
 // - No api response
-// - No
-// Gulpfile ES6->ES5, src and public folder
+// Gulpfile ES6->ES5, src and public folder - DONE
 // Npm v7 on pi
 // node on pi
 // sourcemaps
+
+// Array of weather sources to use
+const weatherInfoSource = ['LFPG'];
+
+console.log('makeMultipleRequests', api.makeMultipleRequests(weatherInfoSource));
 
 
 
