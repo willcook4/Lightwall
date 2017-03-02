@@ -4,7 +4,7 @@
 var DMX = require('dmx');
 //Custom modules/packages
 var devices = require('./devices').devices;
-var api = require('./apiTest');
+var api = require('./api');
 
 // DMX setup
 var A = DMX.Animation;
@@ -117,8 +117,7 @@ setInterval(function () {
 ///////////// Notes: /////////////////
 // Will run on raspberry pi 3.
 // Possible to have 80 channels.
-// Visualiser, open sound control/DMX
-
+// Visualiser, open sound control/DMX output
 
 // Do a blackout function.
 // Need to have error handling for:
@@ -129,7 +128,55 @@ setInterval(function () {
 // node on pi
 // sourcemaps
 
-// Array of weather sources to use
-var weatherInfoSource = ['LFPG'];
+// Things to tidy up...
+// Why the result of api.makeMultipleRequests(weatherInfoSource); is undefined...
+// ES6 all files
+// Tidy up the file structure, clean out unused out of public.
+// What can be shortened / simplified
 
-console.log('makeMultipleRequests', api.makeMultipleRequests(weatherInfoSource));
+// Array of weather sources to use
+var weatherInfoSource = ['LFPG', 'EGLL', 'KJFK', 'LFPO'];
+
+// // Callback test
+// let results = [];
+// const setResults = ((info) => {
+//   results = info;
+//   console.log('Runfile results', results);
+// });
+//
+// const getAPIInfo = ((callback) => {
+//   const info = api.makeMultipleRequests(weatherInfoSource);
+//   // if there is a callback function run it.
+//   callback && callback(info);
+// });
+//
+// getAPIInfo(setResults());
+
+// let results = [];
+
+// function run() {
+//   return new Promise((resolve, reject) => {
+//     resolve(api.makeMultipleRequests(weatherInfoSource));
+//   }).then((info)=>{
+//     const results = info;
+//     return results;
+//   });
+// }
+// run().then((returnedResult) => {
+//   console.log('Runfile results', returnedResult);
+// });
+
+var main = function main(callback) {
+  if (callback) {
+    // wrap callback and return Promise
+    return Promise.resolve(callback());
+  }
+};
+// Callback
+var setResults = function setResults(info) {
+  console.log('Runfile results', info);
+};
+
+main(api.makeMultipleRequests(weatherInfoSource)).then(function (data, setResults) {
+  setResults(data);
+});
