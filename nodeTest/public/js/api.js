@@ -33,7 +33,8 @@ function getInfo(airportCode) {
 
 // Parse the METAR Data, rawinfo.data-packet.not-first-16 characters
 function parseData(rawData) {
-  var parsedData = parseMETAR(rawData.data.substring(16));
+  // console.log('Raw data', rawData.substring(16));
+  var parsedData = parseMETAR(rawData.substring(16));
   // console.log('Parsed Info: ', typeof(parsedData));
   // console.log('windspeed', parsedData.wind.speed);
   return parsedData;
@@ -50,34 +51,35 @@ function refreshRateOfData(rawData) {
 
 // Function to call the requests individually and return the results as an array of raw METAR results .
 function makeMultipleRequests(inputArray) {
-
-  // console.log('inputArray', inputArray);
-  // for(var i=0; i < inputArray.length; i++) {
-  // const requestArray = [];
-  // requestArray.push({ i: getInfo(inputArray[i])});
-  // console.log('Here: ', requestArray);
-  axios.all([getInfo(inputArray[0]), getInfo(inputArray[1]), getInfo(inputArray[2]), getInfo(inputArray[3])]).then(axios.spread(function (a, b, c, d) {
-    // Add parameters to the spread, one for each weather request
-    var results = [];
-    results.push(a.data);
-    results.push(b.data);
-    results.push(c.data);
-    results.push(d.data);
-    console.log('apiResults: ', results);
-    return results;
-  }))
-  // .then((results) => {
-  //   console.log(results);
-  //   return results;
-  // })
-  .catch(function (error) {
-    if (error.response) {
-      console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-      console.log('Error Code: ', error.response.status);
-      console.log('Error Message: ', error.response.data);
-      return 'Api request error see terminal for errors';
-    }
-    return 'Api request error: ';
+  return new Promise(function (resolve, reject) {
+    // console.log('inputArray', inputArray);
+    // for(var i=0; i < inputArray.length; i++) {
+    // const requestArray = [];
+    // requestArray.push({ i: getInfo(inputArray[i])});
+    // console.log('Here: ', requestArray);
+    axios.all([getInfo(inputArray[0]), getInfo(inputArray[1]), getInfo(inputArray[2]), getInfo(inputArray[3])]).then(axios.spread(function (a, b, c, d) {
+      // Add parameters to the spread, one for each weather request
+      var results = [];
+      results.push(a.data);
+      results.push(b.data);
+      results.push(c.data);
+      results.push(d.data);
+      // console.log('apiResults: ', results); // Testing
+      resolve(results);
+    }))
+    // .then((results) => {
+    //   console.log(results);
+    //   return results;
+    // })
+    .catch(function (error) {
+      if (error.response) {
+        console.log('!!!!!!!! API ERROR !!!!!!!!!!');
+        console.log('Error Code: ', error.response.status);
+        reject(new Error(error.response.data));
+        // return 'Api request error see terminal for errors';
+      }
+      return 'Api request error';
+    });
   });
 }
 

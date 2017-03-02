@@ -32,6 +32,8 @@ var done = function done() {
     loopCount = 0;
   }
   loopCount++;
+  // To quit the script process.exit();
+  process.exit();
 };
 
 // Sample Manual Animation sequence
@@ -136,6 +138,13 @@ setInterval(function () {
 
 // Array of weather sources to use
 var weatherInfoSource = ['LFPG', 'EGLL', 'KJFK', 'LFPO'];
+// Error Testing Station, '123F'
+//////// Airport info ////////////////////////////////////////
+// Paris Charles de Gaulle Airport -> LFPG
+// London Heathrow -> EGLL
+// New York - John F. Kennedy International Airport -> KJFK
+// Paris Orly Airport - > LFPO
+
 
 // // Callback test
 // let results = [];
@@ -165,18 +174,62 @@ var weatherInfoSource = ['LFPG', 'EGLL', 'KJFK', 'LFPO'];
 // run().then((returnedResult) => {
 //   console.log('Runfile results', returnedResult);
 // });
+//
 
-var main = function main(callback) {
-  if (callback) {
-    // wrap callback and return Promise
-    return Promise.resolve(callback());
+// Promises
+// const main = ((callback) => {
+//   if (callback) {
+//     // wrap callback and return Promise
+//     return Promise.resolve(callback());
+//   }
+// });
+// // Callback
+// const setResults = ((info) => {
+//   console.log('Runfile results', info);
+// });
+
+// main(api.makeMultipleRequests(weatherInfoSource))
+// .then((data, setResults) => {
+//   setResults(data);
+// });
+
+
+// Promises v2
+// function setResults(info){
+//   console.log('Runfile results', info);
+// }
+var parisCDGInfo = {};
+var londonInfo = {};
+var nycInfo = {};
+var parisOrlyInfo = {};
+
+// Call the API
+api.makeMultipleRequests(weatherInfoSource).then(function (data) {
+  // setResults(data);
+  console.log('Runfile results', data);
+  parisCDGInfo = data[0];
+  londonInfo = data[1];
+  nycInfo = data[2];
+  parisOrlyInfo = data[3];
+  // Parse the info
+  parisCDGInfo = api.parseData(parisCDGInfo);
+  londonInfo = api.parseData(londonInfo);
+  nycInfo = api.parseData(nycInfo);
+  parisOrlyInfo = api.parseData(parisOrlyInfo);
+  console.log('Parsed data, eg wind speed', parisCDGInfo.wind.speed);
+
+  // Sample dmx with the api data...Animation sequence
+  // alitmeter_hpa // 1016
+  // windspeed //10 (16 * 10)
+  sequenceDuration = parisCDGInfo.altimeter_hpa * 2; // 2036 approx
+  var intensity = parisCDGInfo.wind.speed * 10;
+  if (intensity > 255) {
+    intensity = 255;
   }
-};
-// Callback
-var setResults = function setResults(info) {
-  console.log('Runfile results', info);
-};
 
-main(api.makeMultipleRequests(weatherInfoSource)).then(function (data, setResults) {
-  setResults(data);
+  var testArray = new A().add({ 0: intensity }, sequenceDuration).delay(sequenceDuration).add({ 0: 0 }, sequenceDuration).delay(sequenceDuration).add({ 0: intensity }, sequenceDuration).delay(sequenceDuration).add({ 0: 0 }, sequenceDuration);
+
+  testArray.run(universe, done);
+}).catch(function (error) {
+  console.log('Error: ', error);
 });
