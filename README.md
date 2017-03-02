@@ -19,3 +19,11 @@ Finally after some quick tests we settled on [node-dmx](https://github.com/wiedi
 * Enntec dmx usb pro - USB -> DMX breakout
 * Raspberry Pi - Running the node script
 
+###How to use:
+1. Clone the repo: `git clone <package ssh/https info from github>`
+2. Run `npm install` to install the dependencies.
+3. cd into the `public` folder and then into `js`.
+4. Run `node runfile.js`, the script should run.
+4. If you want/need to edit, open the source directory and edit the files in there. Then run `gulp` this will update the public folder.
+   
+
