@@ -3,7 +3,7 @@
 var DMX = require('dmx');
 //Custom modules/packages
 var devices = require('./devices').devices;
-var api = require('./apiTest');
+var api = require('./api');
 
 // DMX setup
 var A = DMX.Animation;
@@ -31,6 +31,8 @@ const done = () => {
     loopCount = 0;
   }
   loopCount++;
+  // To quit the script process.exit();
+  process.exit();
 };
 
 // Sample Manual Animation sequence
@@ -64,7 +66,7 @@ const randomDuration = () => {
 const storageArray = new A();
 
 // How long to run each sequence for
-const sequenceDuration = 5000; // Milliseconds
+let sequenceDuration = 5000; // Milliseconds
 
 /////// 1st Test ////////////////
 /*
@@ -116,8 +118,7 @@ setInterval(function () {
 ///////////// Notes: /////////////////
 // Will run on raspberry pi 3.
 // Possible to have 80 channels.
-// Visualiser, open sound control/DMX
-
+// Visualiser, open sound control/DMX output
 
 // Do a blackout function.
 // Need to have error handling for:
@@ -128,11 +129,120 @@ setInterval(function () {
 // node on pi
 // sourcemaps
 
+// Things to tidy up...
+// Why the result of api.makeMultipleRequests(weatherInfoSource); is undefined...
+// ES6 all files
+// Tidy up the file structure, clean out unused out of public.
+// What can be shortened / simplified
+
 // Array of weather sources to use
-const weatherInfoSource = ['LFPG'];
+const weatherInfoSource = ['LFPG', 'EGLL', 'KJFK', 'LFPO'];
+// Error Testing Station, '123F'
+//////// Airport info ////////////////////////////////////////
+// Paris Charles de Gaulle Airport -> LFPG
+// London Heathrow -> EGLL
+// New York - John F. Kennedy International Airport -> KJFK
+// Paris Orly Airport - > LFPO
 
-console.log('makeMultipleRequests', api.makeMultipleRequests(weatherInfoSource));
 
+// // Callback test
+// let results = [];
+// const setResults = ((info) => {
+//   results = info;
+//   console.log('Runfile results', results);
+// });
+//
+// const getAPIInfo = ((callback) => {
+//   const info = api.makeMultipleRequests(weatherInfoSource);
+//   // if there is a callback function run it.
+//   callback && callback(info);
+// });
+//
+// getAPIInfo(setResults());
+
+// let results = [];
+
+// function run() {
+//   return new Promise((resolve, reject) => {
+//     resolve(api.makeMultipleRequests(weatherInfoSource));
+//   }).then((info)=>{
+//     const results = info;
+//     return results;
+//   });
+// }
+// run().then((returnedResult) => {
+//   console.log('Runfile results', returnedResult);
+// });
+//
+
+// Promises
+// const main = ((callback) => {
+//   if (callback) {
+//     // wrap callback and return Promise
+//     return Promise.resolve(callback());
+//   }
+// });
+// // Callback
+// const setResults = ((info) => {
+//   console.log('Runfile results', info);
+// });
+
+// main(api.makeMultipleRequests(weatherInfoSource))
+// .then((data, setResults) => {
+//   setResults(data);
+// });
+
+
+// Promises v2
+// function setResults(info){
+//   console.log('Runfile results', info);
+// }
+let parisCDGInfo = {};
+let londonInfo = {};
+let nycInfo = {};
+let parisOrlyInfo = {};
+
+
+// Call the API
+api.makeMultipleRequests(weatherInfoSource)
+  .then((data) => {
+    // setResults(data);
+    console.log('Runfile results', data);
+    parisCDGInfo = data[0];
+    londonInfo = data[1];
+    nycInfo = data[2];
+    parisOrlyInfo = data[3];
+    // Parse the info
+    parisCDGInfo = api.parseData(parisCDGInfo);
+    londonInfo = api.parseData(londonInfo);
+    nycInfo = api.parseData(nycInfo);
+    parisOrlyInfo = api.parseData(parisOrlyInfo);
+    console.log('Parsed data, eg wind speed', parisCDGInfo.wind.speed);
+
+    // Sample dmx with the api data...Animation sequence
+    // alitmeter_hpa // 1016
+    // windspeed //10 (16 * 10)
+    sequenceDuration = parisCDGInfo.altimeter_hpa * 2; // 2036 approx
+    let intensity = parisCDGInfo.wind.speed * 10;
+    if(intensity > 255) {
+      intensity = 255;
+    }
+
+    const testArray = new A()
+       .add({0: intensity}, sequenceDuration)
+       .delay(sequenceDuration)
+       .add({0: 0}, sequenceDuration)
+       .delay(sequenceDuration)
+       .add({0: intensity}, sequenceDuration)
+       .delay(sequenceDuration)
+       .add({0: 0}, sequenceDuration);
+
+    testArray.run(universe, done);
+
+  })
+  .catch((error) => {
+    console.log('Error: ', error);
+  });
 
 
 

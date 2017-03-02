@@ -5,7 +5,7 @@ const parseMETAR = require('metar');
 // API Request Config
 const config = {
   baseURL: 'http://tgftp.nws.noaa.gov/data/observations/metar/stations/',
-  timeout: 10000
+  timeout: 10000 // 10 seconds
 };
 
 //////// Airport info ////////////////////////////////////////
@@ -19,18 +19,20 @@ function getInfo(airportCode) {
   // Add to URL, URL needs 'airportcode.TXT' format
   const formattedAirportCode = airportCode + '.TXT';
   console.log(`Getting ${formattedAirportCode} data...`);
-  axios.get(config.baseURL + formattedAirportCode)
-        .then((responseObject) => {
-          console.log('This runs?', responseObject.data);
-          return responseObject.data;
-        }).catch(function (error) {
-          console.log(error);
-        });
+  return axios.get(config.baseURL + formattedAirportCode);
+        // .then((responseObject) => {
+        //   // console.log('This runs?', responseObject.data);
+        //   return responseObject.data;
+        // }).catch(function (error) {
+        //   console.log(error);
+        //   return error.response;
+        // });
 }
 
 // Parse the METAR Data, rawinfo.data-packet.not-first-16 characters
 function parseData(rawData) {
-  const parsedData = parseMETAR(rawData.data.substring(16));
+  // console.log('Raw data', rawData.substring(16));
+  const parsedData = parseMETAR(rawData.substring(16));
   // console.log('Parsed Info: ', typeof(parsedData));
   // console.log('windspeed', parsedData.wind.speed);
   return parsedData;
@@ -47,41 +49,52 @@ function refreshRateOfData(rawData) {
 
 // Function to call the requests individually and return the results as an array of raw METAR results .
 function makeMultipleRequests(inputArray) {
-
-  console.log('inputArray', inputArray);
+  return new Promise (
+    function( resolve, reject) {
+  // console.log('inputArray', inputArray);
   // for(var i=0; i < inputArray.length; i++) {
     // const requestArray = [];
     // requestArray.push({ i: getInfo(inputArray[i])});
     // console.log('Here: ', requestArray);
-  axios.all([getInfo(inputArray[0]),
-    getInfo(inputArray[1]),
-    getInfo(inputArray[2]),
-    getInfo(inputArray[3])])
-    .then(axios.spread((a, b, c, d) => {
-    // Add parameters to the spread, one for each weather request
-      const results = [];
-      results.push(a);
-      results.push(b);
-      results.push(c);
-      results.push(d);
-      return results;
-    })).catch((error) => {
-      if (error.response) {
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        console.log('Error Code: ', error.response.status);
-        console.log('Error Message: ', error.response.data);
-        return 'Api request error see terminal for errors';
-      }
-      return 'Api request error: ';
-    });
-  // const j = getInfo(inputArray[i]);
-
-  // results.push(j);
-  // return results;
+    axios.all([
+      getInfo(inputArray[0]),
+      getInfo(inputArray[1]),
+      getInfo(inputArray[2]),
+      getInfo(inputArray[3])])
+      .then(axios.spread((a, b, c, d) => {
+      // Add parameters to the spread, one for each weather request
+        const results = [];
+        results.push(a.data);
+        results.push(b.data);
+        results.push(c.data);
+        results.push(d.data);
+        // console.log('apiResults: ', results); // Testing
+        resolve(results);
+      }))
+      // .then((results) => {
+      //   console.log(results);
+      //   return results;
+      // })
+      .catch((error) => {
+        if (error.response) {
+          console.log('!!!!!!!! API ERROR !!!!!!!!!!');
+          console.log('Error Code: ', error.response.status);
+          reject(new Error(error.response.data));
+          // return 'Api request error see terminal for errors';
+        }
+        return 'Api request error';
+      });
+    }
+  );
 }
 
-// }
-console.log('Results:', makeMultipleRequests(['LFPG', 'EGLL', 'KJFK', 'LFPO']));
+// makeMultipleRequests(['LFPG', 'EGLL', 'KJFK', 'LFPO']);
+
+
+
+
+
+
   // Sending multiple requests, only executes the then if all requests come back.
   //axios.all([
   //  getInfo('LFPG')/*, getInfo('EGLL'), getInfo('KJFK') */
