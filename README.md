@@ -8,6 +8,8 @@ DMX is a standard for control of lighting fixtures and other devices. Historical
 Initially the approach was to use [Open Lighting Architecture](https://www.openlighting.org/ola/) to control the dmx output via a python script. Although even with perseverance the compiled build failed to work for us. We looked at [simple DMX](https://github.com/c0z3n/pySimpleDMX) but this seemed to require large amounts of code to keep the state for the buffer and to continiously update the dmx stream. 
 Finally after some quick tests we settled on [node-dmx](https://github.com/wiedi/node-dmx) as the base to build our application from.
 
+####Challenges faced
+
 
 ###Technology used:
 
@@ -17,7 +19,7 @@ Finally after some quick tests we settled on [node-dmx](https://github.com/wiedi
 * node-dmx - Controlling the dmx stream
 * metar npm package - Parsing the METAR response from the API request
 * Enntec dmx usb pro - USB -> DMX breakout
-* Raspberry Pi - Running the node script
+* Raspberry Pi - Running the node script from Debian based os 
 
 ###How to use:
 1. Clone the repo: `git clone <package ssh/https info from github>`
