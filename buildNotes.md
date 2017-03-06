@@ -28,7 +28,7 @@
   - Finish and `sudo reboot`;
 
 12. Install git, `sudo apt-get install git`.
-13. Install node and npm...
+13. Install node and npm:
 ```
 cd
 git clone https://github.com/audstanley/NodeJs-Raspberry-Pi
@@ -45,4 +45,10 @@ node -v
 
 // Checked 3/3/2017
 
+
+####Cheats
+Reboot: `sudo reboot`
+Shutdown: `sudo shutdown -h now`
+To check free space on the file system: `df -Bm`
+Reboot and check the filesystem:`sudo shutdown -rF now`
 
