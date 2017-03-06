@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.15.3",
     "dmx": "0.0.4",
-    "metar": "^0.3.0"
+    "metar": "^0.3.0",
+    "node-osc": "^2.0.4"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

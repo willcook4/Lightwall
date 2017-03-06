@@ -31,7 +31,7 @@ function getInfo(airportCode) {
   // });
 }
 
-// Parse the METAR Data, rawinfo.data-packet.not-first-16 characters
+// Parse the METAR Data, rawinfo-data-packet.not-first-16 characters
 function parseData(rawData) {
   // console.log('Raw data', rawData.substring(16));
   var parsedData = parseMETAR(rawData.substring(16));
@@ -148,7 +148,3 @@ function makeMultipleRequests(inputArray) {
 module.exports = {
   parseData: parseData, makeMultipleRequests: makeMultipleRequests
 };
-
-// startup matchmaker is inline comments only
-// others have rubric
-// Check out three.js - 3d rendering

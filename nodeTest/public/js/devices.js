@@ -1,5 +1,12 @@
 'use strict';
 
+// Function to create an array of LED lights with incrementing numbers
+// const devices = [];
+// for(var i=0; i < 81; i++){
+//   array.push({'type': 'LED', 'address': i});
+// }
+// console.log(array);
+
 var devices = [{
   'type': 'RED',
   'address': 0
